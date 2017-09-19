@@ -1,0 +1,28 @@
+REDIRECTS: ON
+NUGET
+  remote: https://www.nuget.org/api/v2
+    Microsoft.AspNet.WebApi (5.2.3) - restriction: >= net461
+      Microsoft.AspNet.WebApi.WebHost (>= 5.2.3 < 5.3)
+    Microsoft.AspNet.WebApi.Client (5.2.3) - restriction: >= net461
+      Newtonsoft.Json (>= 6.0.4) - restriction: >= portable-net45+win8+wp8+wp81+wpa81
+    Microsoft.AspNet.WebApi.Core (5.2.3) - restriction: >= net461
+      Microsoft.AspNet.WebApi.Client (>= 5.2.3)
+    Microsoft.AspNet.WebApi.WebHost (5.2.3) - restriction: >= net461
+      Microsoft.AspNet.WebApi.Core (>= 5.2.3 < 5.3)
+    Microsoft.CodeDom.Providers.DotNetCompilerPlatform (1.0.5) - restriction: >= net461
+      Microsoft.Net.Compilers (>= 2.1) - restriction: >= net46
+    Microsoft.Data.Edm (5.8.3) - restriction: || (>= net40) (>= win8) (>= wp8) (>= wpa81)
+    Microsoft.Data.OData (5.8.3) - restriction: || (>= net40) (>= win8) (>= wp8) (>= wpa81)
+      Microsoft.Data.Edm (5.8.3)
+      System.Spatial (5.8.3)
+    Microsoft.Data.Services.Client (5.8.3) - restriction: >= net40
+      Microsoft.Data.OData (5.8.3) - restriction: || (>= net40) (>= sl4) (>= portable-net45+win8+wp8+wpa81)
+    Microsoft.Net.Compilers (2.1) - restriction: >= net461
+    Microsoft.WindowsAzure.ConfigurationManager (3.2.3)
+    Newtonsoft.Json (6.0.4) - restriction: >= net461
+    System.Spatial (5.8.3) - restriction: || (>= net40) (>= win8) (>= wp8) (>= wpa81)
+    WindowsAzure.Storage (4.3)
+      Microsoft.Data.OData (>= 5.6.2) - restriction: || (>= net40) (>= win8) (>= wp8) (>= wpa81)
+      Microsoft.Data.Services.Client (>= 5.6.2) - restriction: >= net40
+      Microsoft.WindowsAzure.ConfigurationManager (>= 1.8) - restriction: >= net40
+      Newtonsoft.Json (>= 5.0.8) - restriction: || (>= net40) (>= wp8)

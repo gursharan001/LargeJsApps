@@ -1,0 +1,16 @@
+Microsoft.AspNet.WebApi
+Microsoft.AspNet.WebApi.Client
+Microsoft.AspNet.WebApi.Core
+Microsoft.AspNet.WebApi.WebHost
+Microsoft.CodeDom.Providers.DotNetCompilerPlatform
+Microsoft.Net.Compilers
+Newtonsoft.Json
+windowsazure.storage
+Microsoft.WindowsAzure.ConfigurationManager
+System.ValueTuple
+Microsoft.AspNet.Cors
+Microsoft.AspNet.WebApi.Cors
+Microsoft.AspNet.SignalR
+Microsoft.Owin.Host.SystemWeb
+Microsoft.AspNet.WebApi.Owin
+Microsoft.Owin.Cors

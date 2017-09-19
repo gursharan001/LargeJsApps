@@ -1,0 +1,42 @@
+{
+  "name": "modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/knockout": "^3.4.45",
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-all": "^1.1.0",
+    "gulp-cachebust": "0.0.8",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-to-json": "^0.1.8",
+    "gulp-if": "^2.0.2",
+    "gulp-order": "^1.1.1",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-typescript": "^3.2.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "jasmine-ajax": "^3.3.1",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-ajax": "^0.1.13",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.31",
+    "karma-typescript-preprocessor2": "https://github.com/gursharan001/karma-typescript-preprocessor2/archive/09bf875c3e4823527a26bb4cb6c9d0b3abaf9edb.tar.gz",
+    "promise-polyfill": "^6.0.2",
+    "require-dir": "^0.3.2",
+    "typescript": "^2.4.2",
+    "whatwg-fetch": "^2.0.3"
+  }
+}

@@ -1,0 +1,15 @@
+.vs/config/applicationhost.config
+*/**/obj/
+*/**/bin/
+packages/
+Output/
+*.ncrunchproject
+*/**/*.csproj.user
+*.user
+*/**/dist/
+*/**/export/
+*/**/node_modules/
+*/**/jspm_packages/
+*/**/typings/
+*.ncrunchsolution
+.vs/

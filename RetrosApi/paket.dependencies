@@ -1,0 +1,19 @@
+redirects: on
+source https://www.nuget.org/api/v2/
+
+nuget Microsoft.AspNet.Cors
+nuget Microsoft.AspNet.SignalR
+nuget Microsoft.AspNet.WebApi 5.2.3 restriction: >= net461
+nuget Microsoft.AspNet.WebApi.Client 5.2.3 restriction: >= net461
+nuget Microsoft.AspNet.WebApi.Core 5.2.3 restriction: >= net461
+nuget Microsoft.AspNet.WebApi.Cors
+nuget Microsoft.AspNet.WebApi.Owin
+nuget Microsoft.AspNet.WebApi.WebHost 5.2.3 restriction: >= net461
+nuget Microsoft.CodeDom.Providers.DotNetCompilerPlatform 1.0.5 restriction: >= net461
+nuget Microsoft.Net.Compilers 2.1.0 restriction: >= net461
+nuget Microsoft.Owin.Cors
+nuget Microsoft.Owin.Host.SystemWeb
+nuget Microsoft.WindowsAzure.ConfigurationManager
+nuget Newtonsoft.Json 6.0.4 restriction: >= net461
+nuget System.ValueTuple
+nuget windowsazure.storage

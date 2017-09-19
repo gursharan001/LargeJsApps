@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/libs/materialize.min.css">
+        <script src="/libs/knockout-min.js"></script>
+        <script src="/libs/jquery.min.js"></script>   
+        <script src="/libs/jquery.signalR.min.js"></script>        
+        <script src="module.min.js"></script>
+    </head>
+    <body>
+        <div class="container" id="spa">
+            <table class="bordered striped highlight">
+                <thead>
+                    <tr>
+                        <th>Retrospective Id</th>
+                        <th>Retrospective Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- ko foreach: retros-->
+                    <tr>
+                        <td><span data-bind="text: $data.id"></span></td>
+                        <td><span data-bind="text: $data.name"></span></td>
+                    </tr>
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
+        <script>
+            $(document).ready(function () {
+
+                var connection = $.hubConnection("http://localhost:54187/signalr", { useDefaultPath: false });
+                var hubProxy = connection.createHubProxy("retrosHub");
+                hubProxy.on("dummyFunc", function () {});
+
+                var spa = document.getElementById("spa");
+                ko.applyBindings(new vgl.retros.retrosVm(), spa);
+
+                setTimeout(function () { connection.start(); }, 0);
+            });
+        </script>
+    </body>
+</html>
