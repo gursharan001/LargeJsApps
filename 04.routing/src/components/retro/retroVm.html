@@ -1,0 +1,74 @@
+<div>
+    <div class="row">
+        <div class="col m12">
+            <div class="card-panel teal lighten-2">
+                <span data-bind="text: retroName"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m4">
+            <div align="center"><b>What went well</b></div>
+            <div class="row">
+                <div class="input-field col s9">
+                <input type="text" data-bind="textInput: wentWell">
+                </div>
+                <div class="input-field col s3">    
+                <a href="#" data-bind="click: addWentWellComment">Add</a>
+                </div>
+            </div>
+            <!-- ko foreach: whatWentWell-->
+            <div class="row">
+            <div class="col s9">
+                <span data-bind="text: comment"></span>
+            </div>
+            <div class="col s3">
+                <a href="#" data-bind="click: $parent.removeWentWellComment">Delete</a>
+            </div>
+            </div>
+            <!-- /ko -->    
+        </div>
+        <div class="col m4">
+            <div  align="center"><b>What did not go well</b></div>
+            <div class="row">
+                <div class="input-field col s9">
+                <input type="text" data-bind="textInput: didNotGoWell">
+                </div>
+                <div class="input-field col s3">
+                <a href="#" data-bind="click: addDidNotGoWellComment">Add</a>
+                </div>
+            </div>
+            <!-- ko foreach: whatDidNotGoWell-->
+            <div class="row">
+            <div class="col s9">
+                <span data-bind="text: comment"></span>
+            </div>
+            <div class="col s3">
+                <a href="#" data-bind="click: $parent.removeDidNotGoWellComment">Delete</a>
+            </div>
+            </div>
+            <!-- /ko -->    
+        </div>
+        <div class="col m4">
+            <div  align="center"><b>Suggested Improvements</b></div>
+            <div class="row">
+                <div class="input-field col s9">
+                <input type="text" data-bind="textInput: suggestedImprovement">
+                </div>
+                <div class="input-field col s3">
+                <a href="#" data-bind="click: addSuggestedImprovementComment">Add</a>
+                </div>
+            </div>
+            <!-- ko foreach: suggestedImprovements-->
+            <div class="row">
+            <div class="col s9">
+                <span data-bind="text: comment"></span>
+            </div>
+            <div class="col s3">
+                <a href="#" data-bind="click: $parent.removeSuggestedImprovementComment">Delete</a>
+            </div>
+            </div>
+            <!-- /ko -->    
+        </div>
+    </div>
+</div>

@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jquery": "^1.10.33",
     "@types/knockout": "^3.4.45",
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
@@ -34,7 +35,6 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.31",
     "karma-typescript-preprocessor2": "https://github.com/gursharan001/karma-typescript-preprocessor2/archive/09bf875c3e4823527a26bb4cb6c9d0b3abaf9edb.tar.gz",
-    "promise-polyfill": "^6.0.2",
     "require-dir": "^0.3.2",
     "typescript": "^2.4.2",
     "whatwg-fetch": "^2.0.3"

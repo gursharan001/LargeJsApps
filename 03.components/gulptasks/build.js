@@ -12,9 +12,9 @@ var order = require("gulp-order");
 
 gulp.task("buildKoTemplates", function () {
     "use strict";
-    var t1 = gulp.src("src/components/moduleComponentTemplates.tpl")
+    var t1 = gulp.src("src/components/retrosComponentTemplates.tpl")
         .pipe(htmltojson({
-            filename: "moduleComponentTemplates",
+            filename: "retrosComponentTemplates",
             useAsVariable: true
         }))
         .pipe(gulp.dest("src/components"));

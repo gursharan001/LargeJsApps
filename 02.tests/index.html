@@ -33,7 +33,7 @@
                 hubProxy.on("dummyFunc", function () {});
 
                 var spa = document.getElementById("spa");
-                ko.applyBindings(new vgl.retros.retrosVm(), spa);
+                ko.applyBindings(new vgl.retros.RetrosVm(), spa);
 
                 setTimeout(function () { connection.start(); }, 0);
             });

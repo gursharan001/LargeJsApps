@@ -1,0 +1,33 @@
+<div>
+    <div class="row"></div>
+    <div class="row">
+        <form class="col s12" data-bind="submit: addRetro">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" data-bind="textInput: retroName" id="retroName" placeholder="Retrospective Name">
+                </div>
+                <div class="col s6">
+                    <button class="btn waves-effect waves-light" type="submit" data-bind="enable: canAddRetro">Create</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <table class="bordered striped highlight">
+        <thead>
+            <tr>
+                <th>Retrospective Id</th>
+                <th>Retrospective Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ko foreach: retros-->
+            <tr>
+                <td><span data-bind="text: $data.id"></span></td>
+                <td><a data-bind="text: $data.name, click: $parent.editRetro" href="#"></a></td>
+                <td><a data-bind="click: $parent.deleteRetro" href="#">Delete</a></td>
+            </tr>
+            <!-- /ko -->
+        </tbody>
+    </table>
+</div>

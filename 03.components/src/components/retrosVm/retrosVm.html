@@ -1,0 +1,18 @@
+<div>
+    <table class="bordered striped highlight">
+        <thead>
+            <tr>
+                <th>Retrospective Id</th>
+                <th>Retrospective Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ko foreach: retros-->
+            <tr>
+                <td><span data-bind="text: $data.id"></span></td>
+                <td><span data-bind="text: $data.name"></span></td>
+            </tr>
+            <!-- /ko -->
+        </tbody>
+    </table>
+</div>

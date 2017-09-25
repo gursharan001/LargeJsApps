@@ -17,6 +17,7 @@ module.exports = function (config) {
         // list of files / patterns to load in the browser
         files: [
             "../libs/knockout-min.js",
+            "../libs/jquery.min.js",            
             "src/**/*.js",
             "src/**/*.ts",
         ],
@@ -30,6 +31,10 @@ module.exports = function (config) {
         preprocessors: {
             "src/**/*.ts": ["typescript", "sourcemap"],
             "tests/**/*.ts": ["typescript", "sourcemap"]
+        },
+
+        mime: {
+            'text/x-typescript': ['ts','tsx']
         },
 
         typescriptPreprocessor: {
@@ -79,7 +84,7 @@ module.exports = function (config) {
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
         browsers: ["PhantomJS"],
-        // browsers: ["Chrome"],
+        //browsers: ["Chrome"],
 
 
         // Continuous Integration mode

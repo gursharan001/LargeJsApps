@@ -10,7 +10,8 @@ function reportChange(event) {
 gulp.task("watch", ["serve"], function () {
     var src = [
         "src/**/*",
-        "index.html"
+        "index.html",
+        "!src/components/retrosComponentTemplates.js"
     ];
 
     gulp.watch(src, ["build", browserSync.reload]).on('change', reportChange);

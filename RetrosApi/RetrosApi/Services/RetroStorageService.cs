@@ -64,13 +64,24 @@ namespace RetrosApi.Services
             table.Execute(deleteOperation);
         }
 
-        public static Retrospective GetRetrospective(Guid id, string retrospectiveName)
+        public static RetrospectiveDto GetRetrospective(Guid id, string retrospectiveName)
         {
             var table = GetTable(RetrospectiveConstants.RetrospectiveTableName);
             var retrieveOperation = TableOperation.Retrieve<Retrospective>(retrospectiveName, id.ToString());
             var retrievalResult = table.Execute(retrieveOperation);
             var retrospectiveEntity = (Retrospective)retrievalResult.Result;
-            return retrospectiveEntity;
+            var data = retrospectiveEntity.RetrospectiveData.DeserializeViewModel<RetrospectiveData>();
+            return new RetrospectiveDto
+            {
+                Id = retrospectiveEntity.Id,
+                Name = retrospectiveEntity.Name,
+                RetrospectiveData = new RetrospectiveDataDto
+                {
+                    WhatWentWell = data.WhatWentWell.Select(x => new CommentDto {Comment = x.comment, Participant = x.particpant}).ToArray(),
+                    WhatDidNotGoWell = data.WhatDidNotGoWell.Select(x => new CommentDto { Comment = x.comment, Participant = x.participant }).ToArray(),
+                    SuggestedImprovements = data.SuggestedImprovements.Select(x => new CommentDto { Comment = x.comment, Participant = x.particpant }).ToArray()
+                }
+            };
         }
 
         public static void AddComment(Guid id, string retrospectiveName, CommentType commentType, string comment, string addedBy)
