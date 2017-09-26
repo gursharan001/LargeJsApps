@@ -35,5 +35,9 @@ namespace vgl.retros {
         editRetro = (retroToEdit: RetroInfoDto) => {
             this.appRouter.navigateToRetro(retroToEdit.id, retroToEdit.name);
         }
+
+        getEditRetroUrl = (retroToEdit: RetroInfoDto) => {
+            return `${AppUrls.retroBaseUrl}/${retroToEdit.id}?retroName=${encodeURIComponent(retroToEdit.name)}`;
+        }
     }
 }
